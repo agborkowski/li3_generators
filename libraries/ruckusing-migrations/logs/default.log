@@ -1,0 +1,388 @@
+Jan 07 22:59:54 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255)) ;
+Jan 07 22:59:54 [info] CREATE UNIQUE INDEX idx_schema_migrations_version ON `schema_migrations`(`version`)
+Jan 07 22:59:54 [info] SELECT version FROM schema_migrations
+Jan 07 22:59:54 [info] SELECT version FROM schema_migrations
+Jan 07 22:59:54 [info] SELECT version FROM schema_migrations
+Jan 07 22:59:54 [info] SHOW DATABASES
+Jan 07 22:59:54 [info] CREATE DATABASE `li3_db_test`
+Jan 07 22:59:54 [info] INSERT INTO schema_migrations (version) VALUES ('20130107215351')
+Jan 07 23:09:00 [info] SELECT version FROM schema_migrations
+Jan 07 23:09:00 [info] SELECT version FROM schema_migrations
+Jan 07 23:09:00 [info] SELECT version FROM schema_migrations
+Jan 07 23:09:00 [info] SHOW DATABASES
+Jan 07 23:09:00 [info] INSERT INTO schema_migrations (version) VALUES ('20130107220632')
+Jan 09 11:24:55 [info] SELECT version FROM schema_migrations
+Jan 09 11:24:55 [info] SELECT version FROM schema_migrations
+Jan 09 11:24:55 [info] SELECT version FROM schema_migrations
+Jan 09 11:39:20 [info] SELECT version FROM schema_migrations
+Jan 09 11:39:20 [info] SELECT version FROM schema_migrations
+Jan 09 11:39:20 [info] SELECT version FROM schema_migrations
+Jan 09 11:39:20 [info] CREATE TABLE `categories` (
+`name` varchar(255),
+`parent_id` int(11),
+`level` int(11),
+`lft` int(11),
+`rgt` int(11),
+`active` tinyint(1),
+`visible` tinyint(1),
+`created_at` datetime,
+`updated_at` datetime,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jan 09 11:39:20 [info] CREATE INDEX idx_categories_parent_id ON `categories`(`parent_id`)
+Jan 09 11:39:20 [info] CREATE INDEX idx_categories_level ON `categories`(`level`)
+Jan 09 11:39:21 [info] CREATE INDEX idx_categories_lft ON `categories`(`lft`)
+Jan 09 11:39:21 [info] CREATE INDEX idx_categories_rgt ON `categories`(`rgt`)
+Jan 09 11:39:21 [info] CREATE INDEX idx_categories_active ON `categories`(`active`)
+Jan 09 11:39:21 [info] CREATE INDEX idx_categories_visible ON `categories`(`visible`)
+Jan 09 11:39:21 [info] INSERT INTO schema_migrations (version) VALUES ('20130109101852')
+Jan 09 11:44:34 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255)) ;
+Jan 09 11:44:34 [info] CREATE UNIQUE INDEX idx_schema_migrations_version ON `schema_migrations`(`version`)
+Jan 09 11:44:34 [info] SELECT version FROM schema_migrations
+Jan 09 11:44:34 [info] SELECT version FROM schema_migrations
+Jan 09 11:44:34 [info] SELECT version FROM schema_migrations
+Jan 09 11:44:34 [info] CREATE TABLE `categories` (
+`id` int(11),
+`name` varchar(255) NOT NULL,
+`parent_id` int(11),
+`level` int(11) DEFAULT 0 NOT NULL,
+`lft` int(11),
+`rgt` int(11),
+`active` tinyint(1) DEFAULT '1',
+`visible` tinyint(1) DEFAULT '1',
+`created_at` datetime,
+`updated_at` datetime,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`,`id`)) ;
+Jan 09 11:44:52 [info] SELECT version FROM schema_migrations
+Jan 09 11:44:52 [info] SELECT version FROM schema_migrations
+Jan 09 11:44:52 [info] SELECT version FROM schema_migrations
+Jan 09 11:44:52 [info] CREATE TABLE `categories` (
+`name` varchar(255) NOT NULL,
+`parent_id` int(11),
+`level` int(11) DEFAULT 0 NOT NULL,
+`lft` int(11),
+`rgt` int(11),
+`active` tinyint(1) DEFAULT '1',
+`visible` tinyint(1) DEFAULT '1',
+`created_at` datetime,
+`updated_at` datetime,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jan 09 11:45:08 [info] SELECT version FROM schema_migrations
+Jan 09 11:45:08 [info] SELECT version FROM schema_migrations
+Jan 09 11:45:08 [info] SELECT version FROM schema_migrations
+Jan 09 11:45:08 [info] DROP TABLE IF EXISTS `categories`
+Jan 09 11:45:08 [info] CREATE TABLE `categories` (
+`name` varchar(255) NOT NULL,
+`parent_id` int(11),
+`level` int(11) DEFAULT 0 NOT NULL,
+`lft` int(11),
+`rgt` int(11),
+`active` tinyint(1) DEFAULT '1',
+`visible` tinyint(1) DEFAULT '1',
+`created_at` datetime,
+`updated_at` datetime,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jan 09 11:45:08 [info] CREATE INDEX idx_categories_parent_id ON `categories`(`parent_id`)
+Jan 09 11:45:08 [info] CREATE INDEX idx_categories_level ON `categories`(`level`)
+Jan 09 11:45:08 [info] CREATE INDEX idx_categories_lft ON `categories`(`lft`)
+Jan 09 11:45:08 [info] CREATE INDEX idx_categories_rgt ON `categories`(`rgt`)
+Jan 09 11:45:09 [info] CREATE INDEX idx_categories_active ON `categories`(`active`)
+Jan 09 11:45:09 [info] CREATE INDEX idx_categories_visible ON `categories`(`visible`)
+Jan 09 11:45:09 [info] INSERT INTO schema_migrations (version) VALUES ('20130109101852')
+Jan 09 11:46:30 [info] SELECT version FROM schema_migrations
+Jan 09 11:46:30 [info] SELECT version FROM schema_migrations
+Jan 09 11:46:30 [info] SELECT version FROM schema_migrations
+Jan 09 11:47:34 [info] SELECT version FROM schema_migrations
+Jan 09 11:47:34 [info] SELECT version FROM schema_migrations
+Jan 09 11:47:34 [info] SELECT version FROM schema_migrations
+Jan 09 11:47:34 [info] INSERT INTO schema_migrations (version) VALUES ('20130109101852')
+Jan 09 11:48:48 [info] SELECT version FROM schema_migrations
+Jan 09 11:48:48 [info] SELECT version FROM schema_migrations
+Jan 09 11:48:48 [info] SELECT version FROM schema_migrations
+Jan 09 11:48:48 [info] INSERT INTO schema_migrations (version) VALUES ('20130109101852')
+Jan 09 11:49:14 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255)) ;
+Jan 09 11:49:14 [info] CREATE UNIQUE INDEX idx_schema_migrations_version ON `schema_migrations`(`version`)
+Jan 09 11:49:14 [info] SELECT version FROM schema_migrations
+Jan 09 11:49:14 [info] SELECT version FROM schema_migrations
+Jan 09 11:49:14 [info] SELECT version FROM schema_migrations
+Jan 09 11:49:14 [info] INSERT INTO schema_migrations (version) VALUES ('20130109101852')
+Jan 09 11:49:46 [info] SELECT version FROM schema_migrations
+Jan 09 11:49:46 [info] SELECT version FROM schema_migrations
+Jan 09 11:49:46 [info] SELECT version FROM schema_migrations
+Jan 09 11:51:14 [info] SELECT version FROM schema_migrations
+Jan 09 11:51:14 [info] SELECT version FROM schema_migrations
+Jan 09 11:51:14 [info] SELECT version FROM schema_migrations
+Jan 09 11:51:26 [info] SELECT version FROM schema_migrations
+Jan 09 11:51:26 [info] SELECT version FROM schema_migrations
+Jan 09 11:51:26 [info] SELECT version FROM schema_migrations
+Jan 09 11:51:26 [info] CREATE TABLE `categories` (
+`id` integer(11),
+`name` varchar(255) NOT NULL,
+`parent_id` int(11),
+`level` int(11) DEFAULT 0 NOT NULL,
+`lft` int(11),
+`rgt` int(11),
+`active` tinyint(1) DEFAULT '1',
+`visible` tinyint(1) DEFAULT '1',
+`created_at` datetime,
+`updated_at` datetime,
+`id` int(11) UNSIGNED auto_increment NOT NULL,
+ PRIMARY KEY (`id`)) ;
+Jan 09 11:54:03 [info] SELECT version FROM schema_migrations
+Jan 09 11:54:03 [info] SELECT version FROM schema_migrations
+Jan 09 11:54:03 [info] SELECT version FROM schema_migrations
+Jan 09 11:54:20 [info] SELECT version FROM schema_migrations
+Jan 09 11:54:20 [info] SELECT version FROM schema_migrations
+Jan 09 11:54:20 [info] SELECT version FROM schema_migrations
+Jan 09 11:55:25 [info] SELECT version FROM schema_migrations
+Jan 09 11:55:25 [info] SELECT version FROM schema_migrations
+Jan 09 11:55:25 [info] SELECT version FROM schema_migrations
+Jan 09 11:55:25 [info] CREATE TABLE `categories` (
+`id` integer(11),
+`name` varchar(255) NOT NULL,
+`parent_id` int(11),
+`level` int(11) DEFAULT 0 NOT NULL,
+`lft` int(11),
+`rgt` int(11),
+`active` tinyint(1) DEFAULT '1',
+`visible` tinyint(1) DEFAULT '1',
+`created_at` datetime,
+`updated_at` datetime) ;
+Jan 09 11:55:25 [info] CREATE INDEX idx_categories_parent_id ON `categories`(`parent_id`)
+Jan 09 11:55:25 [info] CREATE INDEX idx_categories_level ON `categories`(`level`)
+Jan 09 11:55:25 [info] CREATE INDEX idx_categories_lft ON `categories`(`lft`)
+Jan 09 11:55:25 [info] CREATE INDEX idx_categories_rgt ON `categories`(`rgt`)
+Jan 09 11:55:25 [info] CREATE INDEX idx_categories_active ON `categories`(`active`)
+Jan 09 11:55:26 [info] CREATE INDEX idx_categories_visible ON `categories`(`visible`)
+Jan 09 11:55:26 [info] INSERT INTO schema_migrations (version) VALUES ('20130109101852')
+Jan 09 18:49:57 [info] SELECT version FROM schema_migrations
+Jan 09 18:49:57 [info] SELECT version FROM schema_migrations
+Jan 09 18:49:57 [info] SELECT version FROM schema_migrations
+Jan 09 18:49:57 [info] DROP TABLE IF EXISTS `categories`
+Jan 09 18:49:57 [info] CREATE TABLE `categories` (
+`id` integer(11) auto_increment,
+`name` varchar(255) NOT NULL,
+`parent_id` int(11),
+`level` int(11) DEFAULT 0 NOT NULL,
+`lft` int(11),
+`rgt` int(11),
+`active` tinyint(1) DEFAULT '1',
+`visible` tinyint(1) DEFAULT '1',
+`created_at` datetime,
+`updated_at` datetime) ;
+Jan 09 18:50:44 [info] SELECT version FROM schema_migrations
+Jan 09 18:50:44 [info] SELECT version FROM schema_migrations
+Jan 09 18:50:44 [info] SELECT version FROM schema_migrations
+Jan 09 18:50:44 [info] DROP TABLE IF EXISTS `categories`
+Jan 09 18:50:44 [info] CREATE TABLE `categories` (
+`id` int(11) auto_increment,
+`name` varchar(255) NOT NULL,
+`parent_id` int(11),
+`level` int(11) DEFAULT 0 NOT NULL,
+`lft` int(11),
+`rgt` int(11),
+`active` tinyint(1) DEFAULT '1',
+`visible` tinyint(1) DEFAULT '1',
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`)) ;
+Jan 09 18:50:44 [info] CREATE INDEX idx_categories_parent_id ON `categories`(`parent_id`)
+Jan 09 18:50:44 [info] CREATE INDEX idx_categories_level ON `categories`(`level`)
+Jan 09 18:50:45 [info] CREATE INDEX idx_categories_lft ON `categories`(`lft`)
+Jan 09 18:50:45 [info] CREATE INDEX idx_categories_rgt ON `categories`(`rgt`)
+Jan 09 18:50:45 [info] CREATE INDEX idx_categories_active ON `categories`(`active`)
+Jan 09 18:50:45 [info] CREATE INDEX idx_categories_visible ON `categories`(`visible`)
+Jan 09 18:50:45 [info] INSERT INTO schema_migrations (version) VALUES ('20130109181842')
+Jan 09 18:54:18 [info] SELECT version FROM schema_migrations
+Jan 09 18:54:18 [info] SELECT version FROM schema_migrations
+Jan 09 18:54:18 [info] SELECT version FROM schema_migrations
+Jan 09 18:54:18 [info] INSERT INTO categories (name, level, lft, rgt) VALUES('root', 0, 1, 100);
+Jan 09 18:54:18 [info] INSERT INTO schema_migrations (version) VALUES ('20130109185218')
+Jan 09 21:32:43 [info] SELECT version FROM schema_migrations
+Jan 09 21:32:43 [info] SELECT version FROM schema_migrations
+Jan 09 21:32:43 [info] SELECT version FROM schema_migrations
+Jan 09 21:32:43 [info] ALTER TABLE categories ADD `is_default` tinyint(1) DEFAULT '0' NOT NULL
+Jan 09 21:32:44 [info] INSERT INTO schema_migrations (version) VALUES ('20130109203024')
+Jan 10 20:18:28 [info] SELECT version FROM schema_migrations
+Jan 10 20:18:28 [info] SELECT version FROM schema_migrations
+Jan 10 20:18:28 [info] SELECT version FROM schema_migrations
+Jan 10 20:18:28 [info] SHOW COLUMNS FROM `categories` LIKE 'rgt'
+Jan 10 20:18:28 [info] ALTER TABLE `categories` CHANGE `rgt` `rght` int(11)
+Jan 10 20:18:29 [info] INSERT INTO schema_migrations (version) VALUES ('20130110191748')
+Jan 10 22:50:13 [info] SELECT version FROM schema_migrations
+Jan 10 22:50:13 [info] SELECT version FROM schema_migrations
+Jan 10 22:50:13 [info] SELECT version FROM schema_migrations
+Jan 10 22:50:13 [info] CREATE TABLE `products` (
+`id` int(11) auto_increment,
+`name` varchar(255) NOT NULL,
+`description` text NOT NULL,
+`category_id` int(11) NOT NULL,
+`amount_package` int(11) NOT NULL,
+`amount_box` int(11) NOT NULL,
+`amount_pallet` int(11) NOT NULL,
+`amount_box_pallet` int(11) NOT NULL,
+`amount_art_pallet` int(11) NOT NULL,
+`ean_piece` varchar(255),
+`ean_display` varchar(255),
+`ean_box` varchar(255),
+`pkweiu` varchar(255),
+`shelf_time` varchar(255),
+`active` tinyint(1) DEFAULT '1',
+`visible` tinyint(1) DEFAULT '1',
+`created_at` datetime DEFAULT '2013-01-10 22:50:13',
+`updated_at` datetime DEFAULT '2013-01-10 22:50:13',
+ PRIMARY KEY (`id`)) ;
+Jan 10 22:50:13 [info] CREATE INDEX idx_products_name ON `products`(`name`)
+Jan 10 22:50:14 [info] CREATE INDEX idx_products_category_id ON `products`(`category_id`)
+Jan 10 22:50:14 [info] CREATE INDEX idx_products_amount_package ON `products`(`amount_package`)
+Jan 10 22:50:14 [info] CREATE INDEX idx_products_amount_box ON `products`(`amount_box`)
+Jan 10 22:50:14 [info] CREATE INDEX idx_products_amount_pallet ON `products`(`amount_pallet`)
+Jan 10 22:50:14 [info] CREATE INDEX idx_products_amount_box_pallet ON `products`(`amount_box_pallet`)
+Jan 10 22:50:14 [info] CREATE INDEX idx_products_amount_art_pallet ON `products`(`amount_art_pallet`)
+Jan 10 22:50:14 [info] CREATE INDEX idx_products_ean_piece ON `products`(`ean_piece`)
+Jan 10 22:50:15 [info] CREATE INDEX idx_products_ean_display ON `products`(`ean_display`)
+Jan 10 22:50:15 [info] CREATE INDEX idx_products_ean_box ON `products`(`ean_box`)
+Jan 10 22:50:15 [info] CREATE INDEX idx_products_pkweiu ON `products`(`pkweiu`)
+Jan 10 22:50:15 [info] CREATE INDEX idx_products_active ON `products`(`active`)
+Jan 10 22:50:15 [info] CREATE INDEX idx_products_visible ON `products`(`visible`)
+Jan 10 22:50:15 [info] INSERT INTO schema_migrations (version) VALUES ('20130110213259')
+Jan 11 19:37:05 [info] SELECT version FROM schema_migrations
+Jan 11 19:37:05 [info] SELECT version FROM schema_migrations
+Jan 11 19:37:05 [info] SELECT version FROM schema_migrations
+Jan 11 19:37:05 [info] CREATE TABLE `accounts` (
+`id` int(11) auto_increment,
+`username` varchar(255) NOT NULL,
+`email` varchar(255) NOT NULL,
+`password` varchar(255) NOT NULL,
+`name` varchar(255) NOT NULL,
+`surrname` varchar(255) NOT NULL,
+`active` tinyint(1) DEFAULT '1',
+`created_at` datetime DEFAULT '2013-01-11 19:37:05',
+`updated_at` datetime DEFAULT '2013-01-11 19:37:05',
+ PRIMARY KEY (`id`)) ;
+Jan 11 19:37:05 [info] CREATE INDEX idx_accounts_id ON `accounts`(`id`)
+Jan 11 19:37:05 [info] CREATE INDEX idx_accounts_username ON `accounts`(`username`)
+Jan 11 19:37:05 [info] CREATE INDEX idx_accounts_email ON `accounts`(`email`)
+Jan 11 19:37:05 [info] CREATE INDEX idx_accounts_password ON `accounts`(`password`)
+Jan 11 19:37:06 [info] CREATE INDEX idx_accounts_active ON `accounts`(`active`)
+Jan 11 19:37:06 [info] CREATE INDEX idx_accounts_created_at ON `accounts`(`created_at`)
+Jan 11 19:37:06 [info] CREATE INDEX idx_accounts_updated_at ON `accounts`(`updated_at`)
+Jan 11 19:37:06 [info] INSERT INTO schema_migrations (version) VALUES ('20130111183144')
+Jan 12 17:25:27 [info] SHOW CREATE TABLE `accounts`
+Jan 12 17:25:27 [info] SHOW CREATE TABLE `categories`
+Jan 12 17:25:27 [info] SHOW CREATE TABLE `products`
+Jan 12 17:25:27 [info] SHOW CREATE TABLE `schema_migrations`
+Jan 13 13:57:13 [info] SELECT version FROM schema_migrations
+Jan 13 13:57:13 [info] SELECT version FROM schema_migrations
+Jan 13 13:57:13 [info] SELECT version FROM schema_migrations
+Jan 13 13:57:13 [info] CREATE TABLE `media` (
+`id` int(11) auto_increment,
+`file` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jan 13 13:57:13 [info] CREATE INDEX idx_media_id ON `media`(`id`)
+Jan 13 13:57:13 [info] CREATE INDEX idx_media_file ON `media`(`file`)
+Jan 13 13:57:13 [info] INSERT INTO schema_migrations (version) VALUES ('20130113125557')
+Jan 13 14:00:53 [info] SELECT version FROM schema_migrations
+Jan 13 14:00:53 [info] SELECT version FROM schema_migrations
+Jan 13 14:00:53 [info] SELECT version FROM schema_migrations
+Jan 13 14:00:53 [info] DROP TABLE IF EXISTS `media`
+Jan 13 14:00:53 [info] CREATE TABLE `media` (
+`id` int(11) auto_increment,
+`path` text,
+`name` varchar(255),
+`extension` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jan 13 14:00:53 [info] CREATE INDEX idx_media_id ON `media`(`id`)
+Jan 13 14:00:53 [info] CREATE INDEX idx_media_file ON `media`(`file`)
+Jan 13 14:01:08 [info] SELECT version FROM schema_migrations
+Jan 13 14:01:08 [info] SELECT version FROM schema_migrations
+Jan 13 14:01:08 [info] SELECT version FROM schema_migrations
+Jan 13 14:01:08 [info] DROP TABLE IF EXISTS `media`
+Jan 13 14:01:08 [info] CREATE TABLE `media` (
+`id` int(11) auto_increment,
+`path` text,
+`name` varchar(255),
+`extension` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jan 13 14:01:08 [info] CREATE INDEX idx_media_id ON `media`(`id`)
+Jan 13 14:01:08 [info] CREATE INDEX idx_media_name ON `media`(`name`)
+Jan 13 14:01:09 [info] INSERT INTO schema_migrations (version) VALUES ('20130113125567')
+Jan 13 15:56:49 [info] SELECT version FROM schema_migrations
+Jan 13 15:56:49 [info] SELECT version FROM schema_migrations
+Jan 13 15:56:49 [info] SELECT version FROM schema_migrations
+Jan 13 15:57:01 [info] SELECT version FROM schema_migrations
+Jan 13 15:57:01 [info] SELECT version FROM schema_migrations
+Jan 13 15:57:01 [info] SELECT version FROM schema_migrations
+Jan 13 15:57:01 [info] DROP TABLE IF EXISTS `media`
+Jan 13 15:57:01 [info] CREATE TABLE `productimages` (
+`id` int(11) auto_increment,
+`product_id` int(11),
+`path` text,
+`name` varchar(255),
+`extension` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jan 13 15:57:01 [info] CREATE INDEX idx_productimages_id ON `productimages`(`id`)
+Jan 13 15:57:01 [info] CREATE INDEX idx_productimages_product_id ON `productimages`(`product_id`)
+Jan 13 15:57:01 [info] CREATE INDEX idx_productimages_name ON `productimages`(`name`)
+Jan 13 15:57:02 [info] INSERT INTO schema_migrations (version) VALUES ('20130113125568')
+Jan 13 15:59:59 [info] SELECT version FROM schema_migrations
+Jan 13 15:59:59 [info] SELECT version FROM schema_migrations
+Jan 13 15:59:59 [info] SELECT version FROM schema_migrations
+Jan 13 15:59:59 [info] DROP TABLE IF EXISTS `productimages`
+Jan 13 15:59:59 [info] CREATE TABLE `product_images` (
+`id` int(11) auto_increment,
+`product_id` int(11),
+`path` text,
+`name` varchar(255),
+`extension` varchar(255),
+ PRIMARY KEY (`id`)) ;
+Jan 13 15:59:59 [info] CREATE INDEX idx_product_images_id ON `product_images`(`id`)
+Jan 13 15:59:59 [info] CREATE INDEX idx_product_images_product_id ON `product_images`(`product_id`)
+Jan 13 15:59:59 [info] CREATE INDEX idx_product_images_name ON `product_images`(`name`)
+Jan 13 15:59:59 [info] INSERT INTO schema_migrations (version) VALUES ('20130113125578')
+Jan 13 19:31:19 [info] SHOW CREATE TABLE `accounts`
+Jan 13 19:31:19 [info] SHOW CREATE TABLE `categories`
+Jan 13 19:31:19 [info] SHOW CREATE TABLE `product_images`
+Jan 13 19:31:19 [info] SHOW CREATE TABLE `products`
+Jan 13 19:31:19 [info] SHOW CREATE TABLE `schema_migrations`
+Jan 26 20:36:15 [info] CREATE TABLE `schema_migrations` (
+`version` varchar(255)) ;
+Jan 26 20:36:15 [info] CREATE UNIQUE INDEX idx_schema_migrations_version ON `schema_migrations`(`version`)
+Jan 26 20:36:15 [info] SELECT version FROM schema_migrations
+Jan 26 20:36:15 [info] SELECT version FROM schema_migrations
+Jan 26 20:36:15 [info] SELECT version FROM schema_migrations
+Jan 26 20:36:16 [info] CREATE TABLE `index` (
+`id` int(11) auto_increment,
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`)) ;
+Jan 26 20:36:16 [info] CREATE INDEX idx_index_id ON `index`(`id`)
+Jan 26 20:36:16 [info] INSERT INTO schema_migrations (version) VALUES ('20130126193014')
+Jan 26 21:15:16 [info] SELECT version FROM schema_migrations
+Jan 26 21:15:16 [info] SELECT version FROM schema_migrations
+Jan 26 21:15:16 [info] SELECT version FROM schema_migrations
+Jan 26 21:15:16 [info] CREATE TABLE `users` (
+`id` int(11) auto_increment,
+`name` varchar(255),
+`email` varchar(255),
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`)) ;
+Jan 26 21:15:16 [info] CREATE INDEX idx_users_id ON `users`(`id`)
+Jan 26 21:15:16 [info] INSERT INTO schema_migrations (version) VALUES ('20130126201458')
+Jan 27 18:01:43 [info] SELECT version FROM schema_migrations
+Jan 27 18:01:43 [info] SELECT version FROM schema_migrations
+Jan 27 18:01:43 [info] SELECT version FROM schema_migrations
+Jan 27 18:01:43 [info] CREATE TABLE `segments` (
+`id` int(11) auto_increment,
+`created_at` datetime,
+`updated_at` datetime,
+ PRIMARY KEY (`id`)) ;
+Jan 27 18:01:43 [info] CREATE INDEX idx_segments_id ON `segments`(`id`)
+Jan 27 18:01:44 [info] INSERT INTO schema_migrations (version) VALUES ('20130127170021')

@@ -1,0 +1,103 @@
+/**
+ * Controller file created automatically using the li3_generators
+ *
+ * @package li3_generators
+ * @subpackage Command
+ * @author Mateusz Prazmowski <quazar11@gmail.com>
+ */
+
+namespace {:namespace};
+
+use lithium\action\DispatchException;
+use lithium\storage\Session;
+
+use {:use};
+
+class {:class} extends \lithium\action\Controller
+{
+
+	/**
+     * List all {:model}'s
+     */
+	public function index()
+	{
+		${:plural} = {:model}::all();
+		
+		return compact('{:plural}');
+	}
+
+    /**
+     * Show one {:model}
+     */
+	public function show()
+	{
+		${:singular} = {:model}::first($this->request->id);
+
+		if(!${:singular}) {
+            Session::write('ERR', '{:model} not found!');
+
+            return $this->redirect(array('action' => 'index'));
+		}
+		
+		return compact('{:singular}');
+	}
+
+    /**
+     * Create new {:model}
+     */
+	public function add()
+	{
+		${:singular} = {:model}::create();
+
+        $this->_create(${:singular});
+
+		return compact('{:singular}');
+	}
+
+    /**
+     * Edit an existing {:model}
+     */
+	public function edit()
+	{
+		${:singular} = {:model}::find($this->request->id);
+
+		if(!${:singular}) {
+            Session::write('ERR', '{:model} not found!');
+
+            return $this->redirect(array('action' => 'index'));
+		}
+
+        $this->_create(${:singular});
+		
+		return compact('{:singular}');
+	}
+
+    /**
+     * Create new or edit an existing {:model}
+     */
+	protected function _create(${:singular})
+	{
+		if($this->request->is('post') && $this->request->data) {
+            if(${:singular}->save($this->request->data)) {
+                Session::write('OK', '{:model} has been saved.');
+
+                return $this->redirect(array('action' => 'show', 'id' => ${:singular}->id));
+            } else {
+                Session::write('ERR', 'Error occured while saving {:model}!');
+            }
+        }
+	}
+
+    /**
+     * Delete one {:model}
+     */
+    public function delete()
+    {
+        {:model}::find($this->request->id)->delete();
+
+        Session::write('OK', '{:model} has been removed.');
+
+        return $this->redirect(array('action' => 'index'));
+    }
+
+}

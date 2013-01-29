@@ -1,0 +1,35 @@
+/**
+ * Migration file created automatically using the li3_generators
+ *
+ * @package li3_generators
+ * @subpackage Command
+ * @author Mateusz Prazmowski <quazar11@gmail.com>
+ */
+
+class {:advanced_class} extends Ruckusing_BaseMigration
+{
+    /**
+     * Action performed at the end of migration
+     */
+    public function up()
+    {
+        $t = $this->create_table('{:table}');
+
+        $t->column('id', 'integer', array('primary_key' => true, 'auto_increment' => true));
+
+        $t->column('created_at', 'datetime');
+        $t->column('updated_at', 'datetime');
+
+        $t->finish();
+
+        $this->add_index('{:table}', 'id');
+    }
+
+    /**
+     * Action performed at the beginning of migration
+     */
+    public function down()
+    {
+        $this->drop_table('{:table}');
+    }
+}

@@ -1,0 +1,12 @@
+<?= $this->form->create(${:singular}); ?>
+    <fieldset>
+        <div>
+            <?= $this->form->label('Field'); ?>
+            <?= $this->form->text('field'); ?>
+        </div>
+
+        <div class="submit">
+            <?= $this->form->submit('Save', array('class' => 'btn btn-primary')); ?>
+        </div>
+    </fieldset>
+<?= $this->form->end(); ?>

@@ -1,0 +1,35 @@
+<h1>List of {:model}</h1>
+
+<div class="btn-group btn-menu">
+    <?= $this->html->link('<i class="icon-plus icon-white"></i> Create new {:model}', array('action' => 'add'), array('escape' => false, 'class' => 'btn btn-success')); ?>
+</div>
+
+<?php if(isset(${:plural})): ?>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th></th>
+            <th>Created at</th>
+            <th>Updated at</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+            <?php foreach (${:plural} as ${:singular}): ?>
+                <tr>
+                    <td><?= $this->html->link(${:singular}->id, array('action' => 'show', 'id' => ${:singular}->id)); ?></td>
+                    <td></td>
+                    <td><?= ${:singular}->created_at; ?></td>
+                    <td><?= ${:singular}->updated_at; ?></td>
+                    <td>
+                        <?= $this->html->link('show', array('action' => 'show', 'id' => ${:singular}->id), array('class' => 'btn btn-mini')); ?>
+                        <?= $this->html->link('edit', array('action' => 'edit', 'id' => ${:singular}->id), array('class' => 'btn btn-primary btn-mini')); ?>
+                        <?= $this->html->link('delete', array('action' => 'delete', 'id' => ${:singular}->id), array('class' => 'btn btn-danger btn-mini')); ?>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+    </table>
+<?php else: ?>
+    <h2>There is no model yet.</h2>
+<?php endif; ?>

@@ -1,0 +1,7 @@
+<h1>New {:model}</h1>
+
+<div class="btn-group btn-menu">
+    <?= $this->html->link('<i class="icon-arrow-left"></i> back to the list', array('action' => 'index'), array('escape' => false, 'class' => 'btn')); ?>
+</div>
+
+<?= $this->partial->form(compact('{:singular}'));

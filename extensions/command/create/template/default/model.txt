@@ -1,0 +1,14 @@
+/**
+ * Model file created automatically using the li3_generators
+ *
+ * @package li3_generators
+ * @subpackage Command
+ * @author Mateusz Prazmowski <quazar11@gmail.com>
+ */
+
+namespace {:namespace};
+
+class {:class} extends \lithium\data\Model
+{
+
+}

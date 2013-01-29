@@ -1,0 +1,26 @@
+/**
+ * Migration file created automatically using the li3_generators
+ *
+ * @package li3_generators
+ * @subpackage Command
+ * @author Mateusz Prazmowski <quazar11@gmail.com>
+ */
+
+class {:class} extends Ruckusing_BaseMigration
+{
+    /**
+     * Action performed at the end of migration
+     */
+    public function up()
+    {
+
+    }
+
+    /**
+     * Action performed at the beginning of migration
+     */
+    public function down()
+    {
+
+    }
+}

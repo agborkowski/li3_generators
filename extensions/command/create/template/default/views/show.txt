@@ -1,0 +1,21 @@
+<h1>{:model} details</h1>
+
+<div class="btn-group btn-menu">
+    <?= $this->html->link('<i class="icon-arrow-left"></i> back to the list', array('action' => 'index'), array('escape' => false, 'class' => 'btn')); ?>
+</div>
+
+<dl>
+    <dt>Id</dt>
+        <dd><?= ${:singular}->id; ?></dd>
+    <dt></dt>
+        <dd></dd>
+    <dt>Created at</dt>
+        <dd><?= ${:singular}->created_at; ?></dd>
+    <dt>Updated at</dt>
+        <dd><?= ${:singular}->updated_at; ?></dd>
+</dl>
+
+<div class="btn-group btn-menu">
+    <?= $this->html->link('<i class="icon-pencil icon-white"></i> Edycja', array('action' => 'edit', 'id' => ${:singular}->id), array('escape' => false, 'class' => 'btn btn-primary')); ?>
+    <?= $this->html->link('<i class="icon-remove icon-white"></i> Usuń', array('action' => 'delete', 'id' => ${:singular}->id), array('escape' => false, 'class' => 'btn btn-danger')); ?>
+</div>
