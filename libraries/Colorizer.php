@@ -7,7 +7,7 @@
  * @subpackage Libraries
  */
 
-namespace li3_actionpack\libraries;
+namespace li3_generators\libraries;
 
 class Colorizer
 {

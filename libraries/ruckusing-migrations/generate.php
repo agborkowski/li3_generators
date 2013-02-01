@@ -93,7 +93,7 @@ function main($args)
             echo "\nCreated migration: {$file_name}\n\n";
             return true;
         } else {
-            return \li3_actionpack\libraries\Colorizer::fg("{:green}Migration{:end} {$file_name} {:green}has been created.{:end}");
+            return \li3_generators\libraries\Colorizer::fg("{:green}Migration{:end} {$file_name} {:green}has been created.{:end}");
         }
     }
 }
