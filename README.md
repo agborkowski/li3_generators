@@ -97,8 +97,8 @@ For migration is required to create dorectory db/migrations/ in to your applicat
         app
           |- config
           |- controllers
-          |- **db**
-             |- **migrations**
+          |- db
+             |- migrations
           |- extensions
           |- ...
 
