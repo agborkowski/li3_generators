@@ -4,10 +4,21 @@ With this module you can quickly build scaffold of your application, make a data
 or if you need to - delete them. Everything quickly and easy using few commands.
 
 ##Installation
+###1st way - standard instalation
 1. Clone/Download the plugin into your ``libraries`` directory.
 2. Tell your app to load the plugin by adding the following to your app's ``config/bootstrap/libraries.php``:
 
-        Libraries::add('li3_generators');
+    Libraries::add('li3_generators');
+
+###2nd way - using composer
+1. Add following line to your composer file in require section
+
+    "prazmok666/li3_generators": "dev-master".
+
+2. Run composer install/update command.
+3. Tell your app to load the plugin by adding the following to your app's ``config/bootstrap/libraries.php``:
+
+    Libraries::add('li3_generators', array('path' => 'path_to_composer_vendor_directory/prazmok666/li3_generators'));
 
 ##Usage
 
@@ -22,9 +33,9 @@ There are three basic commands:
 
 There are a few more aliases for these commands:
 
-1. For create - c, g, generate
-2. For destroy - d, delete, rm, remove
-3. For migration - migrate, migrations
+    1. For create command    - c, g, generate (li3 g Posts)
+    2. For destroy command   - d, delete, rm, remove (li3 d Posts)
+    3. For migration command - migrate, migrations
 
 For more information type
     $ li3
@@ -66,11 +77,12 @@ For example:
 
 Migrations ar based on `ruckusing-migrations` plugin
 
-    $ li3 migration generate <name>                     - generates migration file. (It's not recommended - better to use li3 create migration <name>).
+    $ li3 migration generate <name>                     - generates migration file. (It's not recommended - better to use li3
+                                                          create migration <name>).
     $ li3 migration db:setup                            - initializing the database for migration support
     $ li3 migration db:migrate                          - run database migration
     $ li3 migration db:migrate VERSION=20101006114707   - run database migration with specified version.
-    $ li3 migration db:migrate VERSION=-2               - run the database migration with a specific version of two previously.
+    $ li3 migration db:migrate VERSION=-2               - run the database migration with a specific version of two previous.
     $ li3 migration db:version                          - determing the current DB version
     $ li3 migration db:status                           - getting the current state of migrations
     $ li3 migration db:schema                           - dumping the current schema to text file
@@ -84,9 +96,9 @@ There is few special options for create and destroy commands:
     $ --library=name_of_library  - Name of library to use
     $ --template=name_of_library - This is the name of the template from which generator gets
                                    the source files. You can add your own templates in
-                                   `<library>\extensions\command\create\template\template_name\*`
+                                   <library>\extensions\command\create\template\template_name\*
     $ --skip=action              - Used for skip generator actions. You can skip few actions
-                                   by typing `--skip=<action1>,<action2>,<action*>`
+                                   by typing --skip=<action1>,<action2>,<action*>
 
 For example `li3 create Posts --template=own_template --library=own_library --skip=test,mock,migration`
 
@@ -98,6 +110,3 @@ For example `li3 create Posts --template=own_template --library=own_library --sk
     $ li3 crate controller Products         - creates only ProductsController file
     $ li3 crete test mode Categories        - creates test file for Categories model
     $ li3 migration db:migrate              - creates database migration
-
-## TODOS
-TODO ;)
