@@ -1,4 +1,4 @@
-# Code generator for [li3](http://lithify.me)
+# Code generator for lithium PHP framework [http://lithify.me](http://lithify.me)
 
 With this module you can quickly build scaffold of your application, make a database migrations,
 or if you need to - delete them. Everything quickly and easy using few commands.
@@ -13,12 +13,12 @@ or if you need to - delete them. Everything quickly and easy using few commands.
 ###2nd way - using composer
 1. Add following line to your composer file in require section
 
-    "prazmok666/li3_generators": "dev-master".
+        "prazmok666/li3_generators": "dev-master".
 
 2. Run composer install/update command.
 3. Tell your app to load the plugin by adding the following to your app's ``config/bootstrap/libraries.php``:
 
-    Libraries::add('li3_generators', array('path' => 'path_to_composer_vendor_directory/prazmok666/li3_generators'));
+        Libraries::add('li3_generators', array('path' => 'path_to_composer_vendor_directory/prazmok666/li3_generators'));
 
 ##Usage
 
@@ -77,12 +77,13 @@ For example:
 
 Migrations ar based on `ruckusing-migrations` plugin
 
-    $ li3 migration generate <name>                     - generates migration file. (It's not recommended - better to use li3
-                                                          create migration <name>).
+    $ li3 migration generate <name>                     - generates migration file. (It's not recommended - better to use
+                                                          li3 create migration <name>).
     $ li3 migration db:setup                            - initializing the database for migration support
     $ li3 migration db:migrate                          - run database migration
     $ li3 migration db:migrate VERSION=20101006114707   - run database migration with specified version.
-    $ li3 migration db:migrate VERSION=-2               - run the database migration with a specific version of two previous.
+    $ li3 migration db:migrate VERSION=-2               - run the database migration with a specific version of two
+                                                          previously.
     $ li3 migration db:version                          - determing the current DB version
     $ li3 migration db:status                           - getting the current state of migrations
     $ li3 migration db:schema                           - dumping the current schema to text file
