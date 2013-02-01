@@ -1,0 +1,19 @@
+{
+    "name":"prazmok666/li3_generators",
+    "type":"library",
+    "description":"Code generators for lithium PHP framework",
+    "keywords":["li3", "generator", "rad"],
+    "homepage":"https://github.com/Prazmok666/li3_generators",
+    "license":"MIT",
+    "authors":[
+        {
+            "name":"Mateusz Prażmowski - Prazmok666",
+            "email":"quazar11@gmail.com",
+            "homepage":"http://li3.it",
+            "role":"Developer"
+        }
+    ],
+    "require":{
+        "php":">=5.3.0"
+    }
+}
