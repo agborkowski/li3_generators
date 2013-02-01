@@ -75,8 +75,7 @@ For example:
 
 ###Migration command actions
 
-Migrations ar based on `ruckusing-migrations` plugin
-
+Migrations ar based on `ruckusing-migrations` plugin.
     $ li3 migration generate <name>                     - generates migration file. (It's not recommended - better to use
                                                           li3 create migration <name>).
     $ li3 migration db:setup                            - initializing the database for migration support
@@ -89,6 +88,17 @@ Migrations ar based on `ruckusing-migrations` plugin
     $ li3 migration db:schema                           - dumping the current schema to text file
 
 > More informations about ruckusing-migrations in [https://github.com/ruckus/ruckusing-migrations](https://github.com/ruckus/ruckusing-migrations).
+
+> For migration is required to create dorectory db/migrations/ in to your application path.
+
+        app
+          |- config
+          |- controllers
+          |- **db**
+             |- **migrations**
+          |- extensions
+          |- ...
+
 
 ##Special options
 
